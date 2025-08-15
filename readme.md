@@ -7,7 +7,7 @@ Backend server for Midtrans payments to retrieve a payment token
 ### 1. Install Dependencies
 
 ```bash
-npm install i
+npm install
 ```
 
 ### 2. Environment Configuration
@@ -33,6 +33,8 @@ npm run dev
 
 **Request:**
 
+Minimum payload for Midtrans as required by the backend. To see other parameters, please refer to the [Midtrans documentation](https://github.com/Midtrans/midtrans-nodejs-client/blob/master/examples/snap/snapAdvancedExample.js) which can be adjusted according to the backend.
+
 ```json
 {
   "orderId": "ORDER-001",
@@ -47,6 +49,7 @@ npm run dev
 
 ```json
 {
+  "success": true,
   "token": "aa895fb1-ef7b-4199-9c5b-817b33a06b73"
 }
 ```
@@ -60,3 +63,5 @@ curl -X POST http://localhost:3000/get-snap-token \
 ```
 
 ---
+
+Server runs on `http://localhost:3000`
